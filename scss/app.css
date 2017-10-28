@@ -1,3 +1,10 @@
+@charset "UTF-8";
+/*
+设置变量
+*/
+/*
+重置默认样式
+*/
 * {
   box-sizing: border-box; }
 
@@ -12,6 +19,20 @@ body {
   #header #logo {
     height: 25px;
     margin-left: 10px; }
+
+.slider {
+  width: 100%;
+  overflow: hidden; }
+  .slider .slider-wrap {
+    display: flex;
+    width: 500%;
+    transition: .3s; }
+  .slider .slider-item {
+    flex-basis: 100%; }
+    .slider .slider-item > a {
+      display: block; }
+      .slider .slider-item > a img {
+        width: 100%; }
 
 body {
   background: #f4f4f4; }

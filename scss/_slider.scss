@@ -1,0 +1,16 @@
+.slider {
+  width: 100%;
+  overflow: hidden;
+  .slider-wrap {
+    display: flex;
+    width: 500%;
+    transition: .3s;
+  }
+  .slider-item {
+    flex-basis: 100%;
+    > a {
+      display: block;
+      img { width: 100%;}
+    }
+  }
+}
