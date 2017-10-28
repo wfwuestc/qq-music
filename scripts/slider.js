@@ -5,7 +5,7 @@ class Slider {
     this.$el = options.el
     this.slides = options.slides
     this.interval = options.interval || 2000
-    this.index = 0
+    this.index = 1
     this.render()
     this.start()
 
@@ -34,22 +34,22 @@ class Slider {
   }
 
   next() {
-
-
-    let x = `-${this.index * 100 / this.length}%`
-    this.$wrap.style.transition = `all 0.3s`
-    this.$wrap.style.transform = `translate(${x})`
-    this.index += 1
-    log('index', this.index)
-    var _this = this
+    let _this = this
+    if (this.index === this.length) {
+      this.$wrap.style = `width:600%;transition:none`
+      this.index = 1
+      this.$wrap.style.transform = `translate(0%)`
+    }
     setTimeout(function () {
-      if (_this.index === _this.length) {
-        _this.$wrap.style = `width:600%;transition:none`
-        _this.index = 1
-        _this.$wrap.style.transform = `translate(0%)`
-        // log('1',-100 / _this.length,_this.$wrap,_this.$wrap.style.transform)
-      }
-    },400)
+      _this.$wrap.style.transition = `all 0.3s`
+      _this.$wrap.style.transform = `translate(${x})`
+    },100)
+    log(this.$wrap)
+    let x = `-${this.index * 100 / this.length}%`
+    log(x)
+    log(this.$wrap)
+    this.index += 1
+
     
   }
 }
