@@ -24,9 +24,7 @@ body {
   width: 100%;
   overflow: hidden; }
   .slider .slider-wrap {
-    display: flex;
-    width: 500%;
-    transition: .3s; }
+    display: flex; }
   .slider .slider-item {
     flex-basis: 100%; }
     .slider .slider-item > a {
