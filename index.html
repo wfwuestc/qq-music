@@ -10,9 +10,36 @@
 <header id="header">
   <img src="images/logo.png" alt="logo" id="logo">
 </header>
-<div class="slider">
+<nav class="navbar">
+  <ul class="nav-list">
+    <li class="nav-item active" data-view="recommend">推荐</li>
+    <li class="nav-item" data-view="ranking">排行榜</li>
+    <li class="nav-item" data-view="search">搜索</li>
+  </ul>
+</nav>
+<div class="recommend tab-content">
+  <div class="slider">
+  </div>
+  <div class="radio">
+    <h2 class="list-title">电台</h2>
+    <ul class="item-container radio-ct">
+    </ul>
+  </div>
+  <div class="hot-list">
+    <h2 class="list-title">热门歌单</h2>
+    <ul class="item-container hot-ct">
+
+    </ul>
+  </div>
+</div>
+<div class="ranking hide tab-content">
+
+</div>
+<div class="search hide tab-content">
+
 </div>
 <script src="scripts/slider.js"></script>
 <script src="scripts/app.js"></script>
+<script src="scripts/tab.js"></script>
 </body>
 </html>

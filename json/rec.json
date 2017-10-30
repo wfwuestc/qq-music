@@ -1,0 +1,88 @@
+{
+  "code": 0,
+  "data": {
+    "slider": [
+      {
+        "linkUrl": "https://y.qq.com/m/act/BattleofTeana2/v3/index.html?ADTAG=jiaodiantu",
+        "picUrl": "http://y.gtimg.cn/music/photo_new/T003R720x288M000000chUe02b3dhE.jpg",
+        "id": 12684
+      },
+      {
+        "linkUrl": "https://y.qq.com/m/act/maskessinger2/v3/index.html?ADTAG=jiaodiantu",
+        "picUrl": "http://y.gtimg.cn/music/photo_new/T003R720x288M000003mVEOf0qjEcu.jpg",
+        "id": 12689
+      },
+      {
+        "linkUrl": "http://y.qq.com/w/album.html?albummid=003NcBsi29OxGc",
+        "picUrl": "http://y.gtimg.cn/music/photo_new/T003R720x288M000000mE2mU0gVnnP.jpg",
+        "id": 12716
+      },
+      {
+        "linkUrl": "http://y.qq.com/w/album.html?albummid=002m1epR3OE4uK",
+        "picUrl": "http://y.gtimg.cn/music/photo_new/T003R720x288M000004GWIIj3tlECe.jpg",
+        "id": 12709
+      },
+      {
+        "linkUrl": "https://y.qq.com/m/act/voiceofdreams2/v3/index.html?ADTAG=jiaodiantu",
+        "picUrl": "http://y.gtimg.cn/music/photo_new/T003R720x288M000002yBeYy45zISw.jpg",
+        "id": 12666
+      }
+    ],
+    "radioList": [
+      {
+        "picUrl": "http://y.gtimg.cn/music/photo/radio/track_radio_307_13_1.jpg",
+        "Ftitle": "一人一首招牌歌",
+        "radioid": 307
+      },
+      {
+        "picUrl": "http://y.gtimg.cn/music/photo/radio/track_radio_199_13_1.jpg",
+        "Ftitle": "热歌",
+        "radioid": 199
+      }
+    ],
+    "songList": [
+      {
+        "songListDesc": "催泪大杀器！盘点演唱会经典万人大合唱",
+        "picUrl": "http://p.qpic.cn/music_cover/1Fr9IFMhWDPeUzWKVEjn3QTL2eX2QziaJmaL0ZAmsvtW71ic9IDUoYzg/300?n=1",
+        "id": "2646688496",
+        "accessnum": 6420282,
+        "songListAuthor": "Harry"
+      },
+      {
+        "songListDesc": "纳尼？这些华语歌手竟然会唱日语歌！",
+        "picUrl": "http://p.qpic.cn/music_cover/z8wAFqicQ1qhImeiajkrgiaR4hYM3pzsUULFnicXshFXdw9uGkm261Ex9g/300?n=1",
+        "id": "1144416825",
+        "accessnum": 606766,
+        "songListAuthor": "风吹草地"
+      },
+      {
+        "songListDesc": "精选内地十大民谣歌手代表作",
+        "picUrl": "http://p.qpic.cn/music_cover/hVUsfUFG2DV466URqw7PT7X66OknPIhic2mKDgicawN4qThIR7yhYY1w/300?n=1",
+        "id": "2043041547",
+        "accessnum": 762972,
+        "songListAuthor": "１'s   ヽ"
+      },
+      {
+        "songListDesc": "2016Billboard嘻哈榜精选",
+        "picUrl": "http://p.qpic.cn/music_cover/tkduvk4dwqBxwzZhsNe0nwkwyiaLHVkxtla7REsX0yNkhibOH3Bdb2og/300?n=1",
+        "id": "2040362185",
+        "accessnum": 1153383,
+        "songListAuthor": "　"
+      },
+      {
+        "songListDesc": "浮光掠影：ACG纯音乐赏析合辑",
+        "picUrl": "http://p.qpic.cn/music_cover/XMPAjfs5uwGZdWII3osvAvCRyNWx8Pqy5Yice41OCZlBhLtk0p0icNvg/300?n=1",
+        "id": "1723063372",
+        "accessnum": 864420,
+        "songListAuthor": "肥喵"
+      },
+      {
+        "songListDesc": "trip-hop单曲大推荐",
+        "picUrl": "http://y.gtimg.cn/music/photo_new/T005R600x600M000002CJKAY1LKpcz.jpg?n=1",
+        "id": "3482605622",
+        "accessnum": 356672,
+        "songListAuthor": "哑忍"
+      }
+    ]
+  }
+}

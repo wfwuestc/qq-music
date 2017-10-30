@@ -1,0 +1,94 @@
+.list_tit {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
+  font-size: 14px;
+  margin: 0;
+}
+.radio, .hot-list {
+  margin: 0 10px 7px;
+  .list-title {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  .item-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .item-list {
+    display: inline-block;
+    flex: 1;
+    flex-basis: 40%;
+    padding-left: 4px;
+    margin-bottom: 10px;
+    width: 50%;
+    .list-main{
+      display: block;
+      background: #fff;
+      text-decoration: none;
+    }
+    &:nth-child(odd)  {
+      padding-right: 4px;
+      padding-left: 0;
+    }
+    .list_info {
+      padding: 0 7px 5px;
+      color: #000;
+
+    }
+    .list-item {
+      position: relative;
+      margin-bottom: 5px;
+      img {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+      &::before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+      .icon_play {
+        height: 24px;
+        bottom: 5px;
+        right: 5px;
+        width: 24px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 24px 60px;
+        background-image: url('../images/list_sprite.png');
+        position: absolute;
+        display: block;
+        z-index: 10;
+      }
+    }
+  }
+}
+.radio {
+  .list_tit {
+    height: 36px;
+    line-height: 18px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}
+.hot-list {
+  .list_tit {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    margin: 0;
+    line-height: 21px;
+  }
+  .list_text {
+    font-size: 12px;
+    margin: 0;
+  }
+}

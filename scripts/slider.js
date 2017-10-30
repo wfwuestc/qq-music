@@ -5,7 +5,7 @@ class Slider {
     this.$el = options.el
     this.slides = options.slides
     this.interval = options.interval || 2000
-    this.index = 1
+    this.index = 0
     this.render()
     this.start()
 
@@ -35,20 +35,21 @@ class Slider {
 
   next() {
     let _this = this
-    if (this.index === this.length) {
-      this.$wrap.style = `width:600%;transition:none`
+    if (this.index === this.length - 1) {
+      this.$wrap.style.transition =`none`
       this.index = 1
       this.$wrap.style.transform = `translate(0%)`
     }
+    //设置延时是留给程序操作DOM的时间
     setTimeout(function () {
       _this.$wrap.style.transition = `all 0.3s`
       _this.$wrap.style.transform = `translate(${x})`
-    },100)
-    log(this.$wrap)
-    let x = `-${this.index * 100 / this.length}%`
-    log(x)
-    log(this.$wrap)
+    },50)
     this.index += 1
+    let x = `-${this.index * 100 / this.length}%`
+
+
+
 
     
   }
