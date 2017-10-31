@@ -1,3 +1,8 @@
+require('../scss/app.scss')
+import Tab from './tab'
+import {Slider,log} from "./slider"
+import lazyLoad from './lazyLoad'
+
 (function () {
   fetch('./json/rec.json')
       .then(res => res.json())
@@ -7,9 +12,10 @@
     renderSlider(json.data.slider)
     renderRadios(json.data.radioList)
     renderPlayList(json.data.songList)
+    lazyLoad(document.querySelectorAll('.lazyload'))
   }
   function renderSlider(slides) {
-    sliders = slides.map(slider => {
+   let sliders = slides.map(slider => {
       return { link: slider.linkUrl, image: slider.picUrl }
     })
     new Slider({
@@ -23,7 +29,7 @@
       <li class="item-list">
         <a href="#" class="list-main">
           <div class="list-item">
-            <img src="${radio.picUrl}" alt="">
+            <img class="lazyload" data-src="${radio.picUrl}" alt="">
             <span class="icon icon_play"></span>
           </div>
           <div class="list_info">
@@ -39,7 +45,7 @@
       <li class="item-list">
         <a href="#" class="list-main">
           <div class="list-item">
-            <img src="${list.picUrl}" alt="">
+            <img class="lazyload" data-src="${list.picUrl}" alt="">
             <span class="icon icon_play"></span>
           </div>
           <div class="list_info">
@@ -51,3 +57,4 @@
     `).join('')
   }
 })()
+Tab()

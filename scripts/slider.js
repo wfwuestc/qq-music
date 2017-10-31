@@ -47,10 +47,6 @@ class Slider {
     },50)
     this.index += 1
     let x = `-${this.index * 100 / this.length}%`
-
-
-
-
-    
   }
 }
+export {Slider,log}
