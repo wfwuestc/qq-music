@@ -1,0 +1,92 @@
+.ranking {
+  margin: 10px;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .topic-main {
+    background: #fff;
+    display: -webkit-box;
+  }
+  .rank-item {
+    margin-bottom: 10px;
+    overflow: hidden;
+    .topic-info {
+      display: block;
+      height: 100px;
+      -webkit-box-flex: 1;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      position: relative;
+      .topic-cont{
+        margin: 0 10px 0 15px;
+        -webkit-box-flex: 1;
+      }
+      p,.topic-title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      p{
+        font-size: 14px;
+        color: rgba(0,0,0,.5);
+      }
+      .text-name {
+        color: #000;
+        margin-left: 8px;
+        margin-right: 5px;
+      }
+
+      .topic-title{
+        font-size: 16px;
+        color: #000;
+        font-weight: normal;
+        margin-bottom: 5px;
+      }
+      .topic-arrow {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -4px;
+        width: 6px;
+        height: 6px;
+        border-right: 1px solid #b2b2b2 ;
+        border-bottom: 1px solid #b2b2b2 ;
+        transform: rotate(-45deg);
+      }
+    }
+    .topic_media {
+      width: 100px;
+      height: 100px;
+      display: block;
+      position: relative;
+      img {
+        width: 100%;
+      }
+      span {
+        position: absolute;
+        display: block;
+        bottom: 7px;
+        text-decoration: none;
+        color: #f4f4f4;
+        font-size: 9px;
+        opacity: 0.6;
+        left: 5px;
+        line-height: 12px;
+        .icon {
+          display: block;
+          float: left;
+          height: 10px;
+          width: 10px;
+          background: url("../images/list_sprite.png");
+          background-position: 0 -50px;
+          background-repeat: no-repeat;
+          background-size: 24px 60px;
+          margin-right: 3px;
+        }
+      }
+
+    }
+  }
+}

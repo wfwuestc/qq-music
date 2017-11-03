@@ -137,6 +137,82 @@ ul, ol {
 .hide {
   display: none; }
 
+.ranking {
+  margin: 10px; }
+  .ranking * {
+    margin: 0;
+    padding: 0; }
+  .ranking .topic-main {
+    background: #fff;
+    display: -webkit-box; }
+  .ranking .rank-item {
+    margin-bottom: 10px;
+    overflow: hidden; }
+    .ranking .rank-item .topic-info {
+      display: block;
+      height: 100px;
+      -webkit-box-flex: 1;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      position: relative; }
+      .ranking .rank-item .topic-info .topic-cont {
+        margin: 0 10px 0 15px;
+        -webkit-box-flex: 1; }
+      .ranking .rank-item .topic-info p, .ranking .rank-item .topic-info .topic-title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+      .ranking .rank-item .topic-info p {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.5); }
+      .ranking .rank-item .topic-info .text-name {
+        color: #000;
+        margin-left: 8px;
+        margin-right: 5px; }
+      .ranking .rank-item .topic-info .topic-title {
+        font-size: 16px;
+        color: #000;
+        font-weight: normal;
+        margin-bottom: 5px; }
+      .ranking .rank-item .topic-info .topic-arrow {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -4px;
+        width: 6px;
+        height: 6px;
+        border-right: 1px solid #b2b2b2;
+        border-bottom: 1px solid #b2b2b2;
+        transform: rotate(-45deg); }
+    .ranking .rank-item .topic_media {
+      width: 100px;
+      height: 100px;
+      display: block;
+      position: relative; }
+      .ranking .rank-item .topic_media img {
+        width: 100%; }
+      .ranking .rank-item .topic_media span {
+        position: absolute;
+        display: block;
+        bottom: 7px;
+        text-decoration: none;
+        color: #f4f4f4;
+        font-size: 9px;
+        opacity: 0.6;
+        left: 5px;
+        line-height: 12px; }
+        .ranking .rank-item .topic_media span .icon {
+          display: block;
+          float: left;
+          height: 10px;
+          width: 10px;
+          background: url("../images/list_sprite.png");
+          background-position: 0 -50px;
+          background-repeat: no-repeat;
+          background-size: 24px 60px;
+          margin-right: 3px; }
+
 body {
   background: #f4f4f4; }
 

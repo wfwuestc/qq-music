@@ -1,0 +1,283 @@
+{
+  "code": 0,
+  "subcode": 0,
+  "message": "",
+  "default": 0,
+  "data": {
+    "topList": [
+      {
+        "id": 4,
+        "listenCount": 19800000,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_4_300_206379449.jpg",
+        "songList": [
+          {
+            "singername": "薛之谦",
+            "songname": "别"
+          },
+          {
+            "singername": "林俊杰",
+            "songname": "至少还有你 (Live)"
+          },
+          {
+            "singername": "李荣浩",
+            "songname": "后羿"
+          }
+        ],
+        "topTitle": "广汽传祺·巅峰榜·流行指数",
+        "type": 0
+      },
+      {
+        "id": 26,
+        "listenCount": 19900000,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_26_300_204462973.jpg",
+        "songList": [
+          {
+            "singername": "吴亦凡/Travis Scott",
+            "songname": "Deserve （feat. Travis Scott）"
+          },
+          {
+            "singername": "Taylor Swift",
+            "songname": "Gorgeous"
+          },
+          {
+            "singername": "金志文",
+            "songname": "远走高飞 (独唱版)"
+          }
+        ],
+        "topTitle": "巅峰榜·热歌",
+        "type": 0
+      },
+      {
+        "id": 27,
+        "listenCount": 15882040,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_27_300_206379449.jpg",
+        "songList": [
+          {
+            "singername": "薛之谦",
+            "songname": "别"
+          },
+          {
+            "singername": "李荣浩",
+            "songname": "后羿"
+          },
+          {
+            "singername": "Chris Brown",
+            "songname": "Confidence"
+          }
+        ],
+        "topTitle": "巅峰榜·新歌",
+        "type": 0
+      },
+      {
+        "id": 30,
+        "listenCount": 9800000,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_30_300_205456396.jpg",
+        "songList": [
+          {
+            "singername": "林俊杰",
+            "songname": "至少还有你 (Live)"
+          },
+          {
+            "singername": "林忆莲",
+            "songname": "绿光 (Live)"
+          },
+          {
+            "singername": "陈卓璇",
+            "songname": "爱笑的眼睛 (Live)"
+          }
+        ],
+        "topTitle": "巅峰榜·梦想的声音",
+        "type": 0
+      },
+      {
+        "id": 28,
+        "listenCount": 16748904,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_28_300_204250233.jpg",
+        "songList": [
+          {
+            "singername": "校长",
+            "songname": "过得好吗"
+          },
+          {
+            "singername": "杨清柠/小贱（谭冰尧）",
+            "songname": "小太阳"
+          },
+          {
+            "singername": "黑崎子",
+            "songname": "最美情侣"
+          }
+        ],
+        "topTitle": "巅峰榜·网络歌曲",
+        "type": 0
+      },
+      {
+        "id": 5,
+        "listenCount": 8080240,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_5_300_204462973.jpg",
+        "songList": [
+          {
+            "singername": "吴亦凡/Travis Scott",
+            "songname": "Deserve （feat. Travis Scott）"
+          },
+          {
+            "singername": "戚薇",
+            "songname": "回转木马的孤单"
+          },
+          {
+            "singername": "叶炫清",
+            "songname": "为爱诛仙"
+          }
+        ],
+        "topTitle": "巅峰榜·内地",
+        "type": 0
+      },
+      {
+        "id": 6,
+        "listenCount": 4533680,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_6_300_204560260.jpg",
+        "songList": [
+          {
+            "singername": "孙燕姿",
+            "songname": "跳舞的梵谷"
+          },
+          {
+            "singername": "狮子合唱团",
+            "songname": "天亮以后说分手"
+          },
+          {
+            "singername": "李克勤",
+            "songname": "龙须糖"
+          }
+        ],
+        "topTitle": "巅峰榜·港台",
+        "type": 0
+      },
+      {
+        "id": 3,
+        "listenCount": 11487260,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_3_300_204679891.jpg",
+        "songList": [
+          {
+            "singername": "Taylor Swift",
+            "songname": "Gorgeous"
+          },
+          {
+            "singername": "Martin Garrix/Matisse & Sadko",
+            "songname": "Forever"
+          },
+          {
+            "singername": "Maroon 5/A$AP Rocky",
+            "songname": "Whiskey"
+          }
+        ],
+        "topTitle": "巅峰榜·欧美",
+        "type": 0
+      },
+      {
+        "id": 16,
+        "listenCount": 7333560,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_16_300_204522261.jpg",
+        "songList": [
+          {
+            "singername": "BTOB (비투비)",
+            "songname": "그리워하다 (想念)"
+          },
+          {
+            "singername": "하이라이트 (Highlight)",
+            "songname": "CELEBRATE"
+          },
+          {
+            "singername": "에픽하이 (Epik High)",
+            "songname": "PEOPLE SCARE ME (난 사람이 제일 무서워)"
+          }
+        ],
+        "topTitle": "巅峰榜·韩国",
+        "type": 0
+      },
+      {
+        "id": 17,
+        "listenCount": 1509570,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_17_300_203820499.jpg",
+        "songList": [
+          {
+            "singername": "田口淳之介",
+            "songname": "DIMENSION"
+          },
+          {
+            "singername": "H△G (ハグ)",
+            "songname": "アイロニ (反语)"
+          },
+          {
+            "singername": "LiSA (織部里沙)",
+            "songname": "Catch the Moment"
+          }
+        ],
+        "topTitle": "巅峰榜·日本",
+        "type": 0
+      },
+      {
+        "id": 201,
+        "listenCount": 403550,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/20150127163830.jpg",
+        "songList": [
+          {
+            "singername": "大壮",
+            "songname": "我们不一样"
+          },
+          {
+            "singername": "MC七星",
+            "songname": "佛说"
+          },
+          {
+            "singername": "张艺兴",
+            "songname": "羊 (SHEEP)"
+          }
+        ],
+        "topTitle": "巅峰榜·MV",
+        "type": 0
+      },
+      {
+        "id": 52,
+        "listenCount": 1867350,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_52_300_204871790.jpg",
+        "songList": [
+          {
+            "singername": "阿力普/氕",
+            "songname": "抓不住 (Remix)"
+          },
+          {
+            "singername": "彭坦",
+            "songname": "笑笑"
+          },
+          {
+            "singername": "VAVA/Ty./王倩倩",
+            "songname": "我的新衣"
+          }
+        ],
+        "topTitle": "巅峰榜·腾讯音乐人原创榜",
+        "type": 0
+      },
+      {
+        "id": 36,
+        "listenCount": 4492020,
+        "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_36_300_201816159.jpg",
+        "songList": [
+          {
+            "singername": "郑阳亭",
+            "songname": "你那么爱他"
+          },
+          {
+            "singername": "左慧晨",
+            "songname": "天空之城"
+          },
+          {
+            "singername": "申静雯",
+            "songname": "告白气球"
+          }
+        ],
+        "topTitle": "巅峰榜·K歌金曲",
+        "type": 0
+      }
+    ]
+  }
+}

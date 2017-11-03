@@ -1,6 +1,5 @@
 import {log} from "./slider"
 function lazyLoad(images) {
-  log(images)
   let imgs = [].slice.call(images)
   onscroll()
   window.addEventListener('scroll', onscroll)
@@ -17,7 +16,6 @@ function lazyLoad(images) {
       imgs.forEach(img => {
         if(isVisible(img)){
           // 加载img
-          log(img)
           loadImg(img)
         }
       })

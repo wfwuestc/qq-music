@@ -12,8 +12,6 @@ function Tab() {
     e.target.className += " " + "active"
     let activeName = "." + e.target.getAttribute('data-view')
     let className2 = new RegExp("(\\s|^)" + "hide" + "(\\s|$)")
-
-    log(document.querySelector(activeName))
     let actDiv = document.querySelector(activeName)
     actDiv.className=actDiv.className.replace(/hide/g,"")
   })

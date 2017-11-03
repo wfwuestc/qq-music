@@ -26,7 +26,6 @@ class Slider {
           </a>
         </div>`,
     ).join('')
-    log('length', this.length)
   }
 
   start() {
