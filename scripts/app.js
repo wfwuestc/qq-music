@@ -2,6 +2,7 @@ require('../scss/app.scss')
 import Tab from './tab'
 import {Slider, log} from "./slider"
 import lazyLoad from './lazyLoad'
+import {SwitchCancelBtn, Search} from "./search"
 
 (function () {
   fetch('http://47.91.156.35:5365/')
@@ -12,10 +13,11 @@ import lazyLoad from './lazyLoad'
       .then(res => res.json())
       .then(renderRank)
 
+  let search = new Search(document.querySelector('.search'))
+
   function renderRank(json) {
     renderTopList(json.data.topList)
     lazyLoad(document.querySelectorAll('.lazyload'))
-    log('2222')
   }
 
 
@@ -94,7 +96,6 @@ import lazyLoad from './lazyLoad'
   }
 
   function rankContain(songList) {
-    log(songList)
     return songList.map((item, index) =>
       `
         <p>${index + 1}<span class="text-name">${item.songname}</span>- ${item.singername}</p>
@@ -106,3 +107,4 @@ import lazyLoad from './lazyLoad'
 
 })()
 Tab()
+SwitchCancelBtn()

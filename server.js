@@ -11,6 +11,7 @@ const HEADERS = {
 
 }
 app.use(cors())
+
 async function asyncfile1(req, res) {
   const url = `https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&_=${+new Date()}`
   try {
@@ -23,10 +24,11 @@ async function asyncfile1(req, res) {
     res.json({error: e.message})
   }
 }
+
 app.get('/', asyncfile1)
-app.get('/search', async(req,res) => {
+app.get('/search', async (req, res) => {
   const {keyword, page = 1} = req.query
-  const url = `https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&w=${encodeURIComponent(keyword)}&zhidaqu=1&catZhida=1&t=0&flag=1&ie=utf-8&sem=1&aggr=0&perpage=20&n=20&p=${page}&remoteplace=txt.mqq.all&_=${+ new Date()}`
+  const url = `https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&w=${encodeURIComponent(keyword)}&zhidaqu=1&catZhida=1&t=0&flag=1&ie=utf-8&sem=1&aggr=0&perpage=20&n=20&p=${page}&remoteplace=txt.mqq.all&_=${+new Date()}`
   try {
     res.json(await request({
       uri: url,
@@ -37,9 +39,9 @@ app.get('/search', async(req,res) => {
     res.json({error: e.message})
   }
 })
-app.get('/rank', async(req,res) => {
+app.get('/rank', async (req, res) => {
   const {keyword, page = 1} = req.query
-  const url = `https://c.y.qq.com/v8/fcg-bin/fcg_myqq_toplist.fcg?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&_=${+ new Date()}`
+  const url = `https://c.y.qq.com/v8/fcg-bin/fcg_myqq_toplist.fcg?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&_=${+new Date()}`
   try {
     res.json(await request({
       uri: url,
