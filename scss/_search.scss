@@ -75,7 +75,7 @@
     }
     .singer {
       color: #808080;
-      font-size: 14px;
+      font-size: 12px;
     }
     &:after {
       content: '';
@@ -87,5 +87,35 @@
       height: 1px;
       background: #e5e5e5;
     }
+  }
+  .loading {
+    margin-top: 3px;
+    justify-content: center;
+    display: none;
+    .load-icon {
+      display: block;
+      background: url('../images/icon_loading.png');
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      width:20px;
+      height: 20px;
+      animation: round 1s infinite linear;
+    }
+    p {
+      color: rgba(0,0,0,.4);
+      padding-left: 5px;
+    }
+  }
+}
+.nomore {
+  display: none;
+  text-align: center;
+  color: rgba(0,0,0,.5);
+}
+@keyframes round {
+  0% { transform: rotate(0deg) }
+  50% { transform: rotate(180deg) }
+  100% {
+    transform: rotate(360deg)
   }
 }
