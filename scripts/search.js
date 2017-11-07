@@ -26,7 +26,6 @@ class Search {
 
   onKeyUp(e) {
     let keyword = e.target.value.trim() //使用trim()去除两端空白
-    log('search:', keyword)
     if (!keyword) {
       this.reset()
     }
@@ -62,7 +61,6 @@ class Search {
   }
 
   append(songs) {
-    log(songs)
     let html = songs.map(item =>
         `
         <li class="song-item">

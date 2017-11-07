@@ -11,15 +11,10 @@ import {SwitchCancelBtn, Search} from "./search"
 
   fetch('http://47.91.156.35:5365/rank')
       .then(res => res.json())
-      .then(renderRank)
+      .then(json => json.data.topList)
+      .then(renderTopList)
 
   let search = new Search(document.querySelector('.search'))
-
-  function renderRank(json) {
-    renderTopList(json.data.topList)
-    lazyLoad(document.querySelectorAll('.lazyload'))
-  }
-
 
   function render(json) {
     renderSlider(json.data.slider)

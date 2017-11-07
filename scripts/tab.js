@@ -1,4 +1,5 @@
 import {log} from "./slider"
+import lazyLoad from "./lazyLoad"
 function Tab() {
   let nav = document.querySelector('.nav-list')
   nav.addEventListener('click', function (e) {
@@ -14,6 +15,7 @@ function Tab() {
     let className2 = new RegExp("(\\s|^)" + "hide" + "(\\s|$)")
     let actDiv = document.querySelector(activeName)
     actDiv.className=actDiv.className.replace(/hide/g,"")
+    lazyLoad(actDiv.querySelectorAll('.lazyload'))
   })
 }
 
