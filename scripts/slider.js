@@ -15,7 +15,6 @@ class Slider {
     this.$el.innerHTML = `<div class="slider-wrap"></div>`
     this.first = this.slides[0]
     this.slides.push(this.first)
-    log(this.slides)
     this.$wrap = this.$el.firstElementChild
     this.length = this.slides.length
     this.$wrap.style.width = `${this.length * 100}%`

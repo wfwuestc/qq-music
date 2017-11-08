@@ -319,6 +319,65 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
     transform: rotate(180deg); }
   100% {
     transform: rotate(360deg); } }
+.player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5; }
+  .player .song-info {
+    display: -webkit-box;
+    position: relative;
+    padding: 15px;
+    background: #444f4e;
+    color: #fff; }
+    .player .song-info .album {
+      width: 60px;
+      margin-right: 15px;
+      overflow: hidden;
+      position: relative; }
+      .player .song-info .album:after {
+        content: "";
+        display: block;
+        padding-top: 100%; }
+      .player .song-info .album img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        background-size: cover; }
+    .player .song-info .info {
+      -webkit-box-flex: 1;
+      margin-top: 4px;
+      margin-bottom: 4px; }
+      .player .song-info .info .songname {
+        font-size: 18px;
+        padding-top: 3px;
+        padding-bottom: 3px; }
+      .player .song-info .info .singer {
+        font-size: 14px; }
+    .player .song-info .play-icon {
+      border: 1px solid white;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      margin-top: -22px; }
+      .player .song-info .play-icon::after {
+        content: "";
+        display: block;
+        width: 17px;
+        height: 19px;
+        margin: 11px 0 0 15px;
+        background: url("../images/sprite_play.png");
+        background-repeat: no-repeat;
+        background-size: 40px 350px;
+        background-position: 0 -150px; }
+
 body {
   background: #f4f4f4; }
 
