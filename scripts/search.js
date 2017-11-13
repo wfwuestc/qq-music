@@ -22,22 +22,28 @@ class Search {
     this.nomore = false
     this.input.addEventListener('keyup', this.onKeyUp.bind(this))
     this.$song = this.$el.querySelector('.song-wrap')
-    window.addEventListener('scroll', this.onScroll.bind(this))
+    window.addEventListener('scroll', this.onScroll.bind(this))   
+    let play = document.querySelector('.player')
+    let player = new Player(play)
     this.$song.addEventListener('click', function (e) {
-      let play = document.querySelector('.player')
       if (e.target.nodeName === "LI") {
-        let songid = e.target.getAttribute("songid")
-        let duration = e.target.getAttribute("duration")
-        play.className = play.className.replace(/hide/,"")
-        new Player(play, songid, duration)
+        var node = e.target
       }else if(e.target.parentNode.nodeName === "LI"){
-        let songid = e.target.parentNode.getAttribute("songid")
-        let duration = e.target.parentNode.getAttribute("duration")
-        let promise = Promise.resolve()
-
-        play.className = play.className.replace(/hide/,"")
-        new Player(play, songid, duration)
+        var node = e.target.parentNode
       }
+      let songid = node.getAttribute("songid")
+      let duration = node.getAttribute("duration")
+      let albumid = node.getAttribute("albumid")
+      let singer = node.getAttribute("singer")
+      let song = node.getAttribute("song")
+      let option= {
+        song:song,
+        singer:singer,
+        albumid:albumid,
+        songid:songid,
+        duration:duration
+      }
+      player.play(option)
     })
   }
 
@@ -81,7 +87,7 @@ class Search {
   append(songs) {
     let html = songs.map(item =>
         `
-        <li class="song-item" songid="${item.songid}" duration="${item.interval}">
+        <li class="song-item" songid="${item.songid}" duration="${item.interval}" albumid="${item.albummid}" singer="${item.singer.map(s => s.name).join(' ')}" song="${item.songname}">
         <i class="music-icon"></i>
         <h6 class="song-title">${item.songname}</h6>
         <p class="singer">${item.singer.map(s => s.name).join(' ')}</p>

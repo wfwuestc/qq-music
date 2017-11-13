@@ -383,6 +383,16 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
     width: 100%;
     position: relative;
     background: white; }
+    .player .control .play-list {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: -40px;
+      right: 10px;
+      background: url("../images/sprite_play.png");
+      background-repeat: no-repeat;
+      background-size: 40px 350px;
+      background-position: 5px -232px; }
     .player .control .progress {
       position: absolute;
       width: 100%;
