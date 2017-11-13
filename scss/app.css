@@ -99,10 +99,22 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
   display: flex;
   align-items: center;
   height: 44px;
-  background: #31c27c; }
+  background: #31c27c;
+  position: relative; }
   #header #logo {
     height: 25px;
     margin-left: 10px; }
+  #header .player-button {
+    position: absolute;
+    right: 20px;
+    width: 55px;
+    height: 25px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+    color: white;
+    background: #149c5a;
+    border-radius: 999px; }
 
 .slider {
   width: 100%;
@@ -463,9 +475,14 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
         .player .control .download-btn a::before {
           content: '';
           display: block;
-          background: url("../images/logo.png");
-          background-size: 30px 30px;
-          width: 30px; }
+          background: url("../images/sprite_play.png");
+          background-repeat: no-repeat;
+          background-size: 43px 380px;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          left: 2px;
+          background-position: 2px -322px; }
 
 .hide {
   display: none; }

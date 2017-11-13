@@ -3,8 +3,21 @@
   align-items: center;
   height: $header-height;
   background: $header-background;
+  position: relative;
   #logo {
     height: $logo-height;
     margin-left: 10px;
+  }
+  .player-button {
+    position: absolute;
+    right: 20px;
+    width: 55px;
+    height: 25px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+    color:white;
+    background: rgb(20, 156, 90);
+    border-radius: 999px;
   }
 }

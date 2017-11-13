@@ -13,9 +13,11 @@ class Player {
     this.$duration = this.$el.querySelector('.progress-end')
     document.querySelector('.player .play-list').addEventListener('click', this.hide)
   }
+
   hide() {
     document.querySelector('.player').className += "hide"
   }
+
   playOrPause() {
     this.playButton.addEventListener('click', action)
     let _this = this
@@ -34,16 +36,16 @@ class Player {
   }
 
   play(option) {
-
-    if(!option) return
+    if (!option) return
     let play = document.querySelector('.player')
-    play.className = play.className.replace(/hide/,"")
-    play.querySelector('.album img').setAttribute("src",`//y.gtimg.cn/music/photo_new/T002R150x150M000${option.albumid}.jpg?max_age=2592000`)
+    play.className = play.className.replace(/hide/, "")
+    play.querySelector('.album img').setAttribute("src", `//y.gtimg.cn/music/photo_new/T002R150x150M000${option.albumid}.jpg?max_age=2592000`)
     play.querySelector('.songname').innerHTML = option.song
     play.querySelector('.singer').innerHTML = option.singer
+    this.playButton.className =  this.playButton.className.replace(/topause/, 'toplay')
     this.$audio.src = `http://ws.stream.qqmusic.qq.com/${option.songid}.m4a?fromtag=38`
     this.$duration.innerHTML = this.formatTime(option.duration)
-    play.className = play.className.replace(/hide/,"")
+    play.className = play.className.replace(/hide/, "")
   }
 
   createAudio() {
