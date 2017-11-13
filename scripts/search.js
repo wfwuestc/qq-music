@@ -1,4 +1,5 @@
 import {log} from './slider'
+import {Player} from "./player"
 
 function SwitchCancelBtn() {
   const input = document.querySelector('#search-in')
@@ -22,6 +23,22 @@ class Search {
     this.input.addEventListener('keyup', this.onKeyUp.bind(this))
     this.$song = this.$el.querySelector('.song-wrap')
     window.addEventListener('scroll', this.onScroll.bind(this))
+    this.$song.addEventListener('click', function (e) {
+      let play = document.querySelector('.player')
+      if (e.target.nodeName === "LI") {
+        let songid = e.target.getAttribute("songid")
+        let duration = e.target.getAttribute("duration")
+        play.className = play.className.replace(/hide/,"")
+        new Player(play, songid, duration)
+      }else if(e.target.parentNode.nodeName === "LI"){
+        let songid = e.target.parentNode.getAttribute("songid")
+        let duration = e.target.parentNode.getAttribute("duration")
+        let promise = Promise.resolve()
+
+        play.className = play.className.replace(/hide/,"")
+        new Player(play, songid, duration)
+      }
+    })
   }
 
   onKeyUp(e) {
@@ -55,6 +72,7 @@ class Search {
         })
         .then(songs => this.append(songs))
         .then(() => {
+
           this.fetching = false
           document.querySelector('.loading').setAttribute('style', 'display:none')
         })
@@ -63,7 +81,7 @@ class Search {
   append(songs) {
     let html = songs.map(item =>
         `
-        <li class="song-item">
+        <li class="song-item" songid="${item.songid}" duration="${item.interval}">
         <i class="music-icon"></i>
         <h6 class="song-title">${item.songname}</h6>
         <p class="singer">${item.singer.map(s => s.name).join(' ')}</p>
@@ -75,7 +93,7 @@ class Search {
 
   onScroll() {
     if (this.nomore) {
-      document.querySelector('.nomore').setAttribute('style','display:block')
+      document.querySelector('.nomore').setAttribute('style', 'display:block')
       return window.removeEventListener('scroll', this.onScroll)
     }
     if (document.documentElement.clientHeight + pageYOffset > document.body.scrollHeight - 1) {

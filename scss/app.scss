@@ -4,10 +4,12 @@
 @import "header";
 @import "slider";
 @import "navbar";
-@import "helper";
 @import "rank";
 @import "search";
 @import "player";
+
+@import "helper";
+
 body {
   background: $body-background;
 }

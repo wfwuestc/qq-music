@@ -5,12 +5,13 @@
   right: 0;
   bottom: 0;
   z-index: 5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   .song-info {
     display: -webkit-box;
     position: relative;
     padding: 15px;
-
-    background: rgb(68, 79, 78);
+    background: rgba(68, 79, 78, 0.9);
     color: #fff;
     .album {
       width: 60px;
@@ -62,7 +63,106 @@
         background: url("../images/sprite_play.png");
         background-repeat: no-repeat;
         background-size: 40px 350px;
-        background-position: 0 -150px;
+      }
+    }
+    .toplay::after {
+      background-position: 0 -150px;
+    }
+    .topause::after {
+      background-position: 1px -178px;
+    }
+  }
+  .lyric {
+    -webkit-box-flex: 1;
+    background: rgb(80, 91, 88);
+  }
+  .control {
+    height: 154px;
+    width: 100%;
+    position: relative;
+    background: white;
+    .progress {
+      position: absolute;
+      width: 100%;
+      height: 40px;
+      top: 20px;
+      .progress-wrap{
+        position: absolute;
+        right: 55px;
+        left: 55px;
+        overflow: hidden;
+        height: 40px;
+      }
+      .play-time{
+        position: absolute;
+        top: 0;
+        width: 55px;
+        height: 40px;
+        text-align: center;
+        z-index: 3;
+        font: 12px/1.5 "FZLTXIHJW--GB1-0","hiragino sans gb","Helvetica Neue",Helvetica,STHeiTi,Arial;
+        color: #808080;
+        background-color: #fff;
+        line-height: 40px;
+      }
+      .progress-start {
+        left: 0;
+      }
+      .progress-end {
+        right: 0;
+      }
+    }
+    .progress-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      .progress-all {
+        position: absolute;
+        top: 19px;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,.1);
+        height: 2px;
+        z-index: 4;
+      }
+      .progress-now {
+        position: absolute;
+        top: 19px;
+        left: 0;
+        width: 100%;
+        background: #31c27c;
+        height: 2px;
+        z-index: 4;
+      }
+    }
+    .download-btn {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 65px;
+      a {
+        position: relative;
+        display: block;
+        height: 45px;
+        margin: 0 50px;
+        padding: 0 55px;
+        text-align: center;
+        border: 1px solid;
+        border-radius: 99px;
+        background: rgb(49, 194, 124);
+        color: white;
+        text-decoration: none;
+        line-height: 45px;
+        font-size: 20px;
+        &::before{
+          content: '';
+          display: block;
+          background: url("../images/logo.png");
+          background-size: 30px 30px;
+          width: 30px;
+        }
       }
     }
   }

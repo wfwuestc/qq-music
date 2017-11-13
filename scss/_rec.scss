@@ -4,7 +4,6 @@
   text-overflow: ellipsis;
   font-weight: normal;
   font-size: 14px;
-  margin: 0;
 }
 .radio, .hot-list {
   margin: 0 10px 7px;
@@ -65,7 +64,7 @@
         background-image: url('../images/list_sprite.png');
         position: absolute;
         display: block;
-        z-index: 10;
+        z-index: 1;
       }
     }
   }

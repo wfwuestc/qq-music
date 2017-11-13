@@ -3,6 +3,7 @@ import Tab from './tab'
 import {Slider, log} from "./slider"
 import lazyLoad from './lazyLoad'
 import {SwitchCancelBtn, Search} from "./search"
+import {Player} from "./player"
 
 (function () {
   fetch('http://47.91.156.35:5365/')
@@ -98,8 +99,7 @@ import {SwitchCancelBtn, Search} from "./search"
       `
     ).join('')
   }
-
-
 })()
 Tab()
 SwitchCancelBtn()
+
