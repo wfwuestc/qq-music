@@ -324,6 +324,40 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
     transform: rotate(180deg); }
   100% {
     transform: rotate(360deg); } }
+.lyric {
+  width: 100%;
+  margin: 36px 0 60px 0;
+  overflow: hidden;
+  z-index: 3; }
+  .lyric .lyrics-wrap {
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.8s; }
+    .lyric .lyrics-wrap .lyric-line {
+      height: 42px;
+      line-height: 42px;
+      overflow: hidden;
+      padding: 0 15px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 16px;
+      color: grey;
+      text-align: center; }
+    .lyric .lyrics-wrap .active {
+      color: #31c27c; }
+
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom center;
+  filter: blur(15px);
+  transform: scale(1.15); }
+
 .player {
   position: fixed;
   top: 0;
@@ -332,13 +366,15 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
   bottom: 0;
   z-index: 5;
   display: -webkit-box;
-  -webkit-box-orient: vertical; }
+  -webkit-box-orient: vertical;
+  background: rgba(0, 0, 0, 0.6); }
   .player .song-info {
     display: -webkit-box;
     position: relative;
     padding: 15px;
-    background: rgba(68, 79, 78, 0.9);
-    color: #fff; }
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    z-index: 3; }
     .player .song-info .album {
       width: 60px;
       margin-right: 15px;
@@ -369,6 +405,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
       border: 1px solid white;
       width: 43px;
       height: 43px;
+      opacity: .6;
       border-radius: 50%;
       position: absolute;
       right: 25px;
@@ -388,13 +425,13 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
     .player .song-info .topause::after {
       background-position: 1px -178px; }
   .player .lyric {
-    -webkit-box-flex: 1;
-    background: #505b58; }
+    -webkit-box-flex: 1; }
   .player .control {
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.5);
     height: 154px;
     width: 100%;
-    position: relative;
-    background: white; }
+    position: relative; }
     .player .control .play-list {
       position: absolute;
       width: 30px;
@@ -423,9 +460,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
         height: 40px;
         text-align: center;
         z-index: 3;
-        font: 12px/1.5 "FZLTXIHJW--GB1-0","hiragino sans gb","Helvetica Neue",Helvetica,STHeiTi,Arial;
+        font: 12px/1.5 "FZLTXIHJW--GB1-0", "hiragino sans gb", "Helvetica Neue", Helvetica, STHeiTi, Arial;
         color: #808080;
-        background-color: #fff;
         line-height: 40px; }
       .player .control .progress .progress-start {
         left: 0; }
@@ -465,7 +501,6 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
         margin: 0 50px;
         padding: 0 55px;
         text-align: center;
-        border: 1px solid;
         border-radius: 99px;
         background: #31c27c;
         color: white;

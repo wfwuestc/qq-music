@@ -104,5 +104,6 @@ Tab()
 SwitchCancelBtn()
 document.querySelector('.player-button').addEventListener('click',function () {
   document.querySelector('.player').className = document.querySelector('.player').className.replace(/hide/, "")
+  document.querySelector('.background').classList.remove('hide')
 })
 

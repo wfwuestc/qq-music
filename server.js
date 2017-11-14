@@ -52,4 +52,17 @@ app.get('/rank', async (req, res) => {
     res.json({error: e.message})
   }
 })
+app.get('/lyric', async (req, res) => {
+  const {keyword, page = 1} = req.query
+  const url = `https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric.fcg?nobase64=1&musicid=${keyword}&songtype=0&callback=json`
+  try {
+    res.json(await request({
+      uri: url,
+      json: true,
+      headers: HEADERS,
+    }))
+  } catch (e) {
+    res.json({error: e.message})
+  }
+})
 app.listen(4000)
