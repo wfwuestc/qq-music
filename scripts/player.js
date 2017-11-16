@@ -51,10 +51,12 @@ class Player {
     this.$el.setAttribute("style","transform: translateY(0%)")
     document.querySelector('body').setAttribute("style", "overflow : hidden")
     document.querySelector('html').setAttribute("style", "overflow : hidden")
-    fetch(`https://192.3.229.177:3011/lyric?keyword=${option.songid}`)
+    fetch(`https://qq-music-api.now.sh/lyrics?id=${option.songid}`)
         .then(res => res.json())
-        .then(string => JSON.parse(string.replace(/json\((.*)\)/, "$1")))
-        .then(json => this.lyric.getLyric(json.lyric))
+        .then(json => {
+           this.lyric.getLyric(json.lyric)
+
+        })
   }
   setSongInfo(option) {
     this.$el.className = this.$el.className.replace(/hide/, "")
@@ -67,7 +69,7 @@ class Player {
   }
 
   audioInit(option){
-    this.$audio.src = `https://ws.stream.qqmusic.qq.com/${option.songid}.m4a?fromtag=38`
+    this.$audio.src = `http://ws.stream.qqmusic.qq.com/${option.songid}.m4a?fromtag=38`
     this.duration = option.duration
     this.index = 0
   }

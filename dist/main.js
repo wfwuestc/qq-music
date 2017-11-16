@@ -276,12 +276,10 @@ var Player = function () {
       this.$el.setAttribute("style", "transform: translateY(0%)");
       document.querySelector('body').setAttribute("style", "overflow : hidden");
       document.querySelector('html').setAttribute("style", "overflow : hidden");
-      fetch("https://192.3.229.177:3011/lyric?keyword=" + option.songid).then(function (res) {
+      fetch("https://qq-music-api.now.sh/lyrics?id=" + option.songid).then(function (res) {
         return res.json();
-      }).then(function (string) {
-        return JSON.parse(string.replace(/json\((.*)\)/, "$1"));
       }).then(function (json) {
-        return _this2.lyric.getLyric(json.lyric);
+        _this2.lyric.getLyric(json.lyric);
       });
     }
   }, {
@@ -298,7 +296,7 @@ var Player = function () {
   }, {
     key: "audioInit",
     value: function audioInit(option) {
-      this.$audio.src = "https://ws.stream.qqmusic.qq.com/" + option.songid + ".m4a?fromtag=38";
+      this.$audio.src = "http://ws.stream.qqmusic.qq.com/" + option.songid + ".m4a?fromtag=38";
       this.duration = option.duration;
       this.index = 0;
     }
@@ -517,7 +515,7 @@ var Search = function () {
       document.querySelector('.loading').setAttribute('style', 'display:flex');
       this.keyword = key;
       this.fetching = true;
-      fetch('https://192.3.229.177:3011/search?keyword=' + this.keyword + '&page=' + (page || this.page)).then(function (res) {
+      fetch('https://qq-music-api.now.sh/search?keyword=' + this.keyword + '&page=' + (page || this.page)).then(function (res) {
         return res.json();
       }).then(function (json) {
         _this.page = json.data.song.curpage;
@@ -698,7 +696,7 @@ function renderPlayList(list) {
 "use strict";
 
 
-fetch('https://192.3.229.177:3011/rank').then(function (res) {
+fetch('https://qq-music-api.now.sh/top').then(function (res) {
   return res.json();
 }).then(function (json) {
   return json.data.topList;

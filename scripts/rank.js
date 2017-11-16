@@ -1,6 +1,6 @@
 
 
-fetch('https://192.3.229.177:3011/rank')
+fetch('https://qq-music-api.now.sh/top')
     .then(res => res.json())
     .then(json => json.data.topList)
     .then(renderTopList)

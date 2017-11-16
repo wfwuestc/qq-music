@@ -69,7 +69,7 @@ class Search {
     document.querySelector('.loading').setAttribute('style', 'display:flex')
     this.keyword = key
     this.fetching = true
-    fetch(`https://192.3.229.177:3011/search?keyword=${this.keyword}&page=${page || this.page}`)
+    fetch(`https://qq-music-api.now.sh/search?keyword=${this.keyword}&page=${page || this.page}`)
         .then(res => res.json())
         .then(json => {
           this.page = json.data.song.curpage
