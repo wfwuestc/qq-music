@@ -1,6 +1,6 @@
 
 
-fetch('http://47.91.156.35:5365/rank')
+fetch('https://192.3.229.177:3011/rank')
     .then(res => res.json())
     .then(json => json.data.topList)
     .then(renderTopList)

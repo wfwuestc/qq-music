@@ -1,7 +1,7 @@
 import lazyLoad from './lazyLoad'
 import {Slider, log} from "./slider"
 
-fetch('http://47.91.156.35:5365/')
+fetch('https://192.3.229.177:3011/')
     .then(res => res.json())
     .then(render)
 
