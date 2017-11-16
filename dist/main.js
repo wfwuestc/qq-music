@@ -658,7 +658,7 @@ var _slider = __webpack_require__(0);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-fetch('https://192.3.229.177:3011/').then(function (res) {
+fetch('https://qq-music-api.now.sh/').then(function (res) {
   return res.json();
 }).then(render);
 

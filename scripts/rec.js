@@ -1,7 +1,7 @@
 import lazyLoad from './lazyLoad'
 import {Slider, log} from "./slider"
 
-fetch('https://192.3.229.177:3011/')
+fetch('https://qq-music-api.now.sh/')
     .then(res => res.json())
     .then(render)
 
