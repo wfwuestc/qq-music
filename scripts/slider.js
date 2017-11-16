@@ -21,7 +21,7 @@ class Slider {
     this.$wrap.innerHTML = this.slides.map(slide =>
         `<div class="slider-item">
           <a href="${slide.link}">
-            <img src="${slide.image}" alt="">
+            <img src="${slide.image.replace(/http/, "https")}" alt="">
           </a>
         </div>`,
     ).join('')
