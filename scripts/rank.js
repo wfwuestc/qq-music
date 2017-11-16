@@ -10,7 +10,7 @@ function renderTopList(list) {
       <li class="rank-item">
         <div class="topic-main">
         <a href="#" class="topic_media">
-          <img data-src="${item.picUrl}" class="lazyload">
+          <img data-src="${item.picUrl.replace(/http/,"https")}" class="lazyload">
           <span class="listen_count"><i class="icon"></i>${((item.listenCount)/10000).toFixed(1) + "万"}</span>
         </a>
         <div class="topic-info">
