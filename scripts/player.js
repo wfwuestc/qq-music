@@ -58,7 +58,7 @@ class Player {
   }
   setSongInfo(option) {
     this.$el.className = this.$el.className.replace(/hide/, "")
-    this.$el.querySelector('.album img').setAttribute("src", `//y.gtimg.cn/music/photo_new/T002R150x150M000${option.albumid}.jpg?max_age=2592000`)
+    this.$el.querySelector('.album img').setAttribute("src", `https://y.gtimg.cn/music/photo_new/T002R150x150M000${option.albumid}.jpg?max_age=2592000`)
     this.$el.querySelector('.songname').innerHTML = option.song
     this.$el.querySelector('.singer').innerHTML = option.singer
     document.querySelector('.background').setAttribute("style", `background-image: url("https://y.gtimg.cn/music/photo_new/T002R150x150M000${option.albumid}.jpg")`)
@@ -67,7 +67,7 @@ class Player {
   }
 
   audioInit(option){
-    this.$audio.src = `http://ws.stream.qqmusic.qq.com/${option.songid}.m4a?fromtag=38`
+    this.$audio.src = `https://ws.stream.qqmusic.qq.com/${option.songid}.m4a?fromtag=38`
     this.duration = option.duration
     this.index = 0
   }
