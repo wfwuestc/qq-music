@@ -445,7 +445,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
       background-size: 40px 350px;
       background-position: 5px -232px; }
     .player .control .progress {
-      position: absolute;
+      position: relative;
       width: 100%;
       height: 40px;
       top: 20px; }
@@ -484,7 +484,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
         height: 2px;
         z-index: 4; }
       .player .control .progress-box .progress-now {
-        position: relative;
+        position: absolute;
         top: 19px;
         left: 0;
         width: 100%;
