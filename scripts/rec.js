@@ -14,6 +14,7 @@ function render(json) {
 
 function renderSlider(slides) {
   let sliders = slides.map(slider => {
+    log(slider.picUrl)
     return {link: slider.linkUrl, image: slider.picUrl}
   })
   new Slider({
