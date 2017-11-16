@@ -65,7 +65,7 @@ class Player {
     this.$el.querySelector('.singer').innerHTML = option.singer
     document.querySelector('.background').setAttribute("style", `background-image: url("https://y.gtimg.cn/music/photo_new/T002R150x150M000${option.albumid}.jpg")`)
     document.querySelector('.background').classList.remove('hide')
-    this.$lyricWrap.setAttribute("style",`transform: translateY(0%)`)
+    this.$lyricWrap.setAttribute("style",`transform: translateY(0%); opacity: 1;`)
   }
 
   audioInit(option){

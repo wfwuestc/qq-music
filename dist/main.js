@@ -291,7 +291,7 @@ var Player = function () {
       this.$el.querySelector('.singer').innerHTML = option.singer;
       document.querySelector('.background').setAttribute("style", "background-image: url(\"https://y.gtimg.cn/music/photo_new/T002R150x150M000" + option.albumid + ".jpg\")");
       document.querySelector('.background').classList.remove('hide');
-      this.$lyricWrap.setAttribute("style", "transform: translateY(0%)");
+      this.$lyricWrap.setAttribute("style", "transform: translateY(0%); opacity: 1;");
     }
   }, {
     key: "audioInit",
@@ -373,7 +373,7 @@ var search = new _search.Search(document.querySelector('.search'));
 (0, _tab2.default)();
 (0, _search.SwitchCancelBtn)();
 document.querySelector('.player-button').addEventListener('click', function () {
-  document.querySelector('.player').setAttribute("style", "transform: translateY(0%)");
+  document.querySelector('.player').setAttribute("style", "transform: translateY(0%);opacity: 1");
   document.querySelector('.background').classList.remove('hide');
   document.querySelector('body').setAttribute("style", "overflow : hidden");
   document.querySelector('html').setAttribute("style", "overflow : hidden");
