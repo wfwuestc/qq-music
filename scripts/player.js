@@ -48,7 +48,7 @@ class Player {
     this.audioInit(option)
     this.playButton.className = this.playButton.className.replace(/topause/, 'toplay')
     this.$duration.innerHTML = this.formatTime(option.duration)
-    this.$el.setAttribute("style","transform: translateY(0%)")
+    this.$el.setAttribute("style","transform: translateY(0%); opacity: 1")
     document.querySelector('body').setAttribute("style", "overflow : hidden")
     document.querySelector('html').setAttribute("style", "overflow : hidden")
     fetch(`https://qq-music-api.now.sh/lyrics?id=${option.songid}`)
