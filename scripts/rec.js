@@ -45,7 +45,7 @@ function renderPlayList(list) {
       <li class="item-list">
         <a href="#" class="list-main">
           <div class="list-item">
-            <img class="lazyload" data-src="${list.picUrl}" alt="">
+            <img class="lazyload" data-src="${list.picUrl.replace(/http/,"https")}" alt="">
             <span class="icon icon_play"></span>
           </div>
           <div class="list_info">
