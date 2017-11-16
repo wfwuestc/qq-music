@@ -1,109 +1,17 @@
 require('../scss/app.scss')
 import Tab from './tab'
-import {Slider, log} from "./slider"
-import lazyLoad from './lazyLoad'
 import {SwitchCancelBtn, Search} from "./search"
 import {Player} from "./player"
+import "./rec"
+import "./rank"
 
-(function () {
-  fetch('http://47.91.156.35:5365/')
-      .then(res => res.json())
-      .then(render)
-
-  fetch('http://47.91.156.35:5365/rank')
-      .then(res => res.json())
-      .then(json => json.data.topList)
-      .then(renderTopList)
-
-  let search = new Search(document.querySelector('.search'))
-
-  function render(json) {
-    renderSlider(json.data.slider)
-    renderRadios(json.data.radioList)
-    renderPlayList(json.data.songList)
-    lazyLoad(document.querySelectorAll('.lazyload'))
-  }
-
-  function renderSlider(slides) {
-    let sliders = slides.map(slider => {
-      return {link: slider.linkUrl, image: slider.picUrl}
-    })
-    new Slider({
-      el: document.querySelector('.slider'),
-      slides: sliders,
-    })
-  }
-
-  function renderRadios(radios) {
-    document.querySelector('.radio-ct').innerHTML = radios.map(radio =>
-        `
-      <li class="item-list">
-        <a href="#" class="list-main">
-          <div class="list-item">
-            <img class="lazyload" data-src="${radio.picUrl}" alt="">
-            <span class="icon icon_play"></span>
-          </div>
-          <div class="list_info">
-            <h3 class="list_tit tit_two_row">${radio.Ftitle}</h3>
-          </div>
-        </a>
-      </li>
-    `).join('')
-  }
-
-  function renderPlayList(list) {
-    document.querySelector('.hot-ct').innerHTML = list.map(list =>
-        `
-      <li class="item-list">
-        <a href="#" class="list-main">
-          <div class="list-item">
-            <img class="lazyload" data-src="${list.picUrl}" alt="">
-            <span class="icon icon_play"></span>
-          </div>
-          <div class="list_info">
-            <h3 class="list_tit tit_two_row">${list.songListDesc}</h3>
-            <p class="list_text">${list.songListAuthor}</p>
-          </div>
-        </a>
-      </li>
-    `).join('')
-  }
-
-  function renderTopList(list) {
-    document.querySelector('.rank-container').innerHTML = list.map(item =>
-      `
-      <li class="rank-item">
-        <div class="topic-main">
-        <a href="#" class="topic_media">
-          <img data-src="${item.picUrl}" class="lazyload">
-          <span class="listen_count"><i class="icon"></i>${((item.listenCount)/10000).toFixed(1) + "万"}</span>
-        </a>
-        <div class="topic-info">
-          <div class="topic-cont">
-            <h3 class="topic-title">${item.topTitle}</h3>
-            ${rankContain(item.songList)}
-          </div>
-          <i class="topic-arrow"></i>
-        </div>
-      </div>
-    </li>
-      `
-    ).join('')
-  }
-
-  function rankContain(songList) {
-    return songList.map((item, index) =>
-      `
-        <p>${index + 1}<span class="text-name">${item.songname}</span>- ${item.singername}</p>
-
-      `
-    ).join('')
-  }
-})()
+let search = new Search(document.querySelector('.search'))
 Tab()
 SwitchCancelBtn()
-document.querySelector('.player-button').addEventListener('click',function () {
-  document.querySelector('.player').className = document.querySelector('.player').className.replace(/hide/, "")
+document.querySelector('.player-button').addEventListener('click', function () {
+  document.querySelector('.player').setAttribute("style","transform: translateY(0%)")
   document.querySelector('.background').classList.remove('hide')
+  document.querySelector('body').setAttribute("style", "overflow : hidden")
+  document.querySelector('html').setAttribute("style", "overflow : hidden")
 })
 

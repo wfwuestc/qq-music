@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
   <title>QQ 音乐</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="dist/main.css">
 </head>
 <body>
 <header id="header">
@@ -40,11 +40,11 @@
 </div>
 <div class="search hide tab-content">
   <div class="serach-box">
-    <form action="#" method="get">
-      <input type="text" id="search-in" placeholder="搜索歌曲、歌单、专辑">
+    <div class="input">
+      <input type="text" id="search-in" autocomplete="off" placeholder="搜索歌曲、歌单、专辑">
       <span class="search-icon"></span>
       <span class="cancel-icon"></span>
-    </form>
+    </div>
     <div class="cancel">取消</div>
   </div>
   <div class="song-list">
@@ -57,7 +57,7 @@
   </div>
   <div class="nomore">加载完毕</div>
 </div>
-<div class="player hide">
+<div class="player">
   <div class="song-info">
     <div class="album">
       <img src="" alt="">
@@ -81,7 +81,7 @@
       <div class="progress-wrap">
         <div class="progress-box">
           <div class="progress-all"></div>
-          <div class="progress-now"></div>
+          <div class="progress-now" style="transform: translate(-100%)"></div>
         </div>
       </div>
       <span class="progress-start play-time">0:00</span>
@@ -99,7 +99,7 @@
 
 </div>
 <!--<script src="scripts/slider.js"></script>-->
-<script src="main.js"></script>
+<script src="dist/main.js"></script>
 <!--<script src="scripts/tab.js"></script>-->
 <!--<script src="scripts/lazyLoad.js"></script>-->
 </body>

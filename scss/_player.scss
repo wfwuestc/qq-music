@@ -10,6 +10,8 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   background: rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  transform: translateY(-100%);
   .song-info {
     display: -webkit-box;
     position: relative;
@@ -139,7 +141,7 @@
         top: 19px;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, .1);
+        background: rgba(255,255,255,0.2);
         height: 2px;
         z-index: 4;
       }
