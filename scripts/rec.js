@@ -14,7 +14,6 @@ function render(json) {
 
 function renderSlider(slides) {
   let sliders = slides.map(slider => {
-    log(slider.picUrl)
     return {link: slider.linkUrl, image: slider.picUrl}
   })
   new Slider({
@@ -29,7 +28,7 @@ function renderRadios(radios) {
       <li class="item-list">
         <a href="#" class="list-main">
           <div class="list-item">
-            <img class="lazyload" data-src="${radio.picUrl}" alt="">
+            <img class="lazyload" data-src="${radio.picUrl.replace(/http/,"https")}" alt="">
             <span class="icon icon_play"></span>
           </div>
           <div class="list_info">
