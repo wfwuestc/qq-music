@@ -27,7 +27,7 @@ module.exports = {
     //其他less等文件   转码  生成css文件
     new ExtractTextPlugin('main.css'),
     //压缩js
-    // new UglifyJSPlugin(),
+    new UglifyJSPlugin(),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /main\.css$/g,
       cssProcessor: require('cssnano'),

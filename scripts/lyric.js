@@ -32,13 +32,13 @@ class Lyric {
       let move = this.index / this.lyricLength * 100
       this.$lyricWrap.setAttribute("style", `transform: translateY(-${move}%)`)
       this.index = this.index + 1
-      console.log(this.index)
+
       if(this.index === 1) {
         this.$lyricWrap.children[this.lyricLength - 1].classList.remove('active')
       }
 
     }
-    if (this.index === this.lyricLength - 1 && this.$audio.currentTime - 1 < this.duration) {
+    if (this.index === this.lyricLength - 1 && Math.floor(this.$audio.currentTime) === this.duration) {
       this.index = 0
     }
   }
