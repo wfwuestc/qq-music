@@ -69,7 +69,8 @@ class Player {
   }
 
   audioInit(option){
-    this.$audio.src = `http://ws.stream.qqmusic.qq.com/${option.songid}.m4a?fromtag=38`
+    log(option)
+    this.$audio.src = `http://isure.stream.qqmusic.qq.com/C100${option.songmid}.m4a?fromtag=32`
     this.duration = option.duration
     this.index = 0
   }

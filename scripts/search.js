@@ -32,6 +32,8 @@ class Search {
         var node = e.target.parentNode
       }
       let songid = node.getAttribute("songid")
+      let songmid = node.getAttribute("songmid")
+
       let duration = node.getAttribute("duration")
       let albumid = node.getAttribute("albumid")
       let singer = node.getAttribute("singer")
@@ -41,7 +43,8 @@ class Search {
         singer:singer,
         albumid:albumid,
         songid:songid,
-        duration:duration
+        songmid:songmid,
+        duration:duration,
       }
       player.play(option)
     })
@@ -74,6 +77,7 @@ class Search {
         .then(json => {
           this.page = json.data.song.curpage
           this.nomore = (json.message === "no results")
+          log(json.data.song.list)
           return json.data.song.list
         })
         .then(songs => this.append(songs))
@@ -87,7 +91,7 @@ class Search {
   append(songs) {
     let html = songs.map(item =>
         `
-        <li class="song-item" songid="${item.songid}" duration="${item.interval}" albumid="${item.albummid}" singer="${item.singer.map(s => s.name).join(' ')}" song="${item.songname}">
+        <li class="song-item" songmid="${item.songmid}" songid="${item.songid}" duration="${item.interval}" albumid="${item.albummid}" singer="${item.singer.map(s => s.name).join(' ')}" song="${item.songname}">
         <i class="music-icon"></i>
         <h6 class="song-title">${item.songname}</h6>
         <p class="singer">${item.singer.map(s => s.name).join(' ')}</p>
